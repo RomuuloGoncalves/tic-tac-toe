@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styleAddJogadores.css">
+    <link rel="stylesheet" href="./css/styleJogo.css">
+    <link rel="stylesheet" href="./css/styleVencedor.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="addJogadores">
+        <div class="cor">
+            <div class="cores corAzul"></div>
+            <div class="cores corVermelha"></div>
+        </div>
+        <h1>Jogadores</h1>
+
+        <div class="receberJogadores">
+            <div class="campoJogador">
+                <label for="" class="j1">Jogador 1</label>
+                <input type="text" class="jogador jogador1">
+                <span></span>
+            </div>
+            <h1>Vs</h1>
+            <div class="campoJogador">
+                <label for="" class="j2">Jogador 2</label>
+                <input type="text" class="jogador jogador2">
+                <span></span>
+            </div>
+
+        </div>
+        <button id="iniciar" onclick="iniciar()">Iniciar</button>
+    </div>
+
+    <div class="jogo">
+        <div class="placar">
+            <div class="placares placarVermelho"></div>
+            <div class="placares reflesh" onclick="reset()"><ion-icon name="refresh-outline"></ion-icon>
+            </div>
+            <div class="placares placarAzul"></div>
+        </div>
+        <div class="container">
+			<div class="box box_1">
+				<p class="p" onclick="marcar('p1')" id="p1"></p>
+			</div>
+			<div class="box box_2">
+				<p class="p" onclick="marcar('p2')" id="p2"></p>
+			</div>
+			<div class="box box_3">
+				<p class="p" onclick="marcar('p3')" id="p3"></p>
+			</div>
+			<div class="box box_4">
+				<p class="p" onclick="marcar('p4')" id="p4"></p>
+			</div>
+			<div class="box box_5">
+				<p class="p" onclick="marcar('p5')" id="p5"></p>
+			</div>
+			<div class="box box_6">
+				<p class="p" onclick="marcar('p6')" id="p6"></p>
+			</div>
+			<div class="box box_7">
+				<p class="p" onclick="marcar('p7')" id="p7"></p>
+			</div>
+			<div class="box box_8">
+				<p class="p" onclick="marcar('p8')" id="p8"></p>
+			</div>
+			<div class="box box_9">
+				<p class="p" onclick="marcar('p9')" id="p9"></p>
+			</div>
+            
+		</div>
+
+        
+		<div class="jogadorDiv">
+			<p id="jogador"></p>
+		</div>
+    </div>
+
+    <div class="vencedor apagado">
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/verificarCombinacaoVitoria.js"></script>
+</body>
+</html>

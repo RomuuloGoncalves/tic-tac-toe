@@ -1,0 +1,171 @@
+.jogo{
+    display: none;
+}
+
+.jogo.aparecer{
+    display: flex;
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color:rgb(216, 124, 90);
+    background-color: #d5d5d5;
+    flex-direction: column;
+}
+
+
+.container{
+    height: 285px;
+    width: 285px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+}
+
+.box{
+    background-color: white;
+    border: 0;
+    height: 90px;
+    width: 90px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+p{
+    height: 99%;
+    width: 99%;
+}
+
+.p:hover{
+    cursor: pointer;
+    background-color: rgb(184, 178, 178);
+}
+
+.jogadorDiv{
+    text-align: center;
+    margin-top: 3%;
+    font-size: 30px;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+
+}
+
+.placar{
+    height: 180px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.placares{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+
+}
+
+.reflesh ion-icon{
+    height: 100%;
+    width: 100%;
+
+}
+
+.reflesh{
+    background-color: rgba(158, 70, 158, 0.418);
+    border: 3px solid purple;
+    border-bottom: 0;
+    border-top: 0;
+}
+
+.placarVermelho{
+    height: 60px;
+
+    background-color: rgba(250, 196, 196, 0.87);
+    border: 3px solid red;
+    border-bottom: 0;
+}
+
+.placarAzul{
+    height: 60px;
+
+    background-color: rgba(196, 221, 250, 0.87);
+    border: 3px solid blue;
+    border-top: 0;
+}
+
+@media(max-width:600px){
+
+    .placar{
+        height: 50px;
+        width: 170px;
+        position: absolute;
+        top: 98%;
+        left: 50%;
+        transform: translate(-50%,-100%);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .placares{
+        height: 50px;
+        width: 100%;
+    
+    }
+    
+    .reflesh ion-icon{
+        height: 100%;
+        width: 100%;
+    
+    }
+    
+    .reflesh{
+        background-color: rgba(158, 70, 158, 0.418);
+        border: 3px solid purple;
+        border-bottom: 0;
+        border-top: 0;
+    }
+    
+    .placarVermelho{
+    
+        background-color: rgba(250, 196, 196, 0.87);
+        border: 3px solid red;
+        border-right: 0;
+    }
+    
+    .placarAzul{
+    
+        background-color: rgba(196, 221, 250, 0.87);
+        border: 3px solid blue;
+        border-left: 0;
+    }
+    
+}

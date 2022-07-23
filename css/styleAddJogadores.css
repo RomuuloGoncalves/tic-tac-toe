@@ -1,0 +1,187 @@
+.cor {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    position: absolute;
+    z-index: -1;
+}
+.corAzul,
+.corVermelha {
+    height: 100%;
+    width: 50%;
+}
+
+.corAzul {
+    background-color: rgba(29, 126, 216, 0.493);
+    border: 5px solid blue;
+    border-right: 0;
+}
+
+.corVermelha {
+    background-color: rgba(233, 40, 40, 0.438);
+    border: 5px solid red;
+    border-left: 0;
+}
+
+.addJogadores {
+    max-width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 100px;
+}
+
+.addJogadores h1 {
+    font-size: 50px;
+}
+
+.receberJogadores {
+    width: 80%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.campoJogador {
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+label.j1 {
+    color: blue;
+}
+
+.jogador1 {
+    border: 3px solid blue;
+    background-color: rgba(196, 221, 250, 0.87);
+}
+
+label.j2 {
+    color: red;
+}
+
+.jogador2 {
+    border: 3px solid red;
+    background-color: rgba(250, 196, 196, 0.87);
+}
+
+.campoJogador label {
+    font-size: 35px;
+}
+
+.campoJogador input {
+    height: 50px;
+    width: 100%;
+    outline: 0;
+    font-size: 20px;
+}
+
+#iniciar {
+    height: 60px;
+    width: 200px;
+    font-size: x-large;
+    background-color: yellow;
+    border: 5px solid;
+    animation: 2s bordaBotao infinite ease;
+
+    box-shadow: 10px 8px 16px #0000008c;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#iniciar::after {
+    content: "Iniciar";
+    width: 190px;
+    height: 190px;
+    background: #101010;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: large;
+}
+
+.addJogadores.apagar {
+    display: none;
+    width: 0px;
+    height: 0px;
+}
+
+span{
+    height: 15px;
+}
+
+@media (max-width: 800px) {
+    .addJogadores{
+        gap: 40px;
+    }
+    
+    .receberJogadores {
+        width: 100%;
+
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        gap: 5px;
+    }
+
+    .campoJogador {
+        width: 80%;
+    }
+
+    .cor {
+        flex-direction: column;
+    }
+
+    .cores {
+        width: 100%;
+    }
+
+    .corAzul {
+        border: 5px solid blue;
+        border-bottom: 0;
+    }
+
+    .corVermelha {
+        border: 5px solid red;
+        border-top: 0;
+    }
+}
+
+@keyframes bordaBotao {
+    0%,
+    100% {
+        border: 5px solid red;
+    }
+
+    50% {
+        border: 5px solid blue;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
