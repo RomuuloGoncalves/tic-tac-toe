@@ -117,4 +117,5 @@ function reset(){
     limparSelecionados()
     placarJogadorAzul = 0
     placarJogadorVermelho = 0
+    atualizarPlacar()
 }
