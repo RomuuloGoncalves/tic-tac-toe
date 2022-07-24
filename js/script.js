@@ -118,4 +118,6 @@ function reset(){
     placarJogadorAzul = 0
     placarJogadorVermelho = 0
     atualizarPlacar()
+    jogador = 0
+    vezJogador()
 }
