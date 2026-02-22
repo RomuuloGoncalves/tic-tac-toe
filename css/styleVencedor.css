@@ -1,13 +1,17 @@
-.vencedor.apagado{
-    display: none;
-}
-
+.vencedor.apagado{ display: none }
 .vencedor{
+    position: fixed;
+    inset: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100vw;
+    max-width: 100%;
     height: 100vh;
-    background-color: #d5d5d5;
-    font-size: 35px;
+    background: rgba(13,13,13,0.45);
+    backdrop-filter: blur(4px);
+    font-size: 34px;
+    color: #fff;
+    animation: fadeIn 260ms ease forwards;
 }
+.vencedor > *{ background: linear-gradient(90deg, var(--accent-blue), var(--accent-red)); padding: 28px 36px; border-radius: 14px; box-shadow: var(--shadow); }
+@keyframes fadeIn{ from{ opacity: 0; transform: translateY(8px) } to{ opacity: 1; transform: translateY(0) } }

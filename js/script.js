@@ -103,14 +103,18 @@ function atualizarPlacar(){
 function vencedor(vencedor){
     divVencedor.classList.remove("apagado")
     jogo.classList.toggle("aparecer")
-    
-    if(vencedor == "vemelho"){
-        divVencedor.innerHTML = `Você é o vencedor: ${arrayJogador[1]}!!!`
-        
+    if(vencedor == "vermelho"){
+        divVencedor.innerHTML = `<div>Você é o vencedor: ${arrayJogador[1]}!!!</div>`
     }else{
-        divVencedor.innerHTML = `Você é o vencedor: ${arrayJogador[0]}!!!`
-
+        divVencedor.innerHTML = `<div>Você é o vencedor: ${arrayJogador[0]}!!!</div>`
     }
+}
+
+function mostrarVelha(){
+    divVencedor.classList.remove("apagado")
+    jogo.classList.toggle("aparecer")
+    divVencedor.innerHTML = `<div>Deu velha! Empate.</div>`
+    limparSelecionados()
 }
 
 function reset(){

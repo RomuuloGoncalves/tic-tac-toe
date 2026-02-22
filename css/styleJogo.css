@@ -1,78 +1,47 @@
-.jogo{
-    display: none;
-}
-
+.jogo{ display: none; }
 .jogo.aparecer{
     display: flex;
-    max-width: 100vw;
+    max-width: 100%;
     min-height: 100vh;
-    background-color:rgb(216, 124, 90);
-    background-color: #d5d5d5;
+    background-color: #e9e9ea;
     flex-direction: column;
 }
-
-
 .container{
-    height: 285px;
-    width: 285px;
-    background-color: black;
+    height: 320px;
+    width: 320px;
+    background-color: #111;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
 }
-
 .box{
-    background-color: white;
+    background-color: var(--card);
     border: 0;
-    height: 90px;
-    width: 90px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-p{
-    height: 99%;
-    width: 99%;
-}
-
-.p:hover{
-    cursor: pointer;
-    background-color: rgb(184, 178, 178);
-}
-
-.jogadorDiv{
-    text-align: center;
-    margin-top: 3%;
-    font-size: 30px;
-}
-
-.box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-p{
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     height: 100%;
-    font-weight: 700;
-
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
 }
-
+.box:hover{ transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.14); }
+p{ height: 99%; width: 99%; }
+.p{ cursor: pointer; transition: background-color 160ms ease, color 160ms ease, transform 120ms ease; }
+.p:hover{ background-color: #f2f2f2; transform: scale(1.02); }
+.jogadorDiv{ text-align: center; margin-top: 3%; font-size: 26px; }
+p{ font-size: 44px; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; font-weight: 800; }
 .placar{
     height: 180px;
-    width: 50px;
+    width: 56px;
     position: absolute;
     top: 50%;
     left: 100%;
@@ -80,49 +49,26 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 6px;
 }
-
 .placares{
     height: 60px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
-
+    font-size: 26px;
+    border-radius: 8px;
+    transition: transform 160ms ease, box-shadow 160ms ease;
 }
-
-.reflesh ion-icon{
-    height: 100%;
-    width: 100%;
-
-}
-
-.reflesh{
-    background-color: rgba(158, 70, 158, 0.418);
-    border: 3px solid purple;
-    border-bottom: 0;
-    border-top: 0;
-}
-
-.placarVermelho{
-    height: 60px;
-
-    background-color: rgba(250, 196, 196, 0.87);
-    border: 3px solid red;
-    border-bottom: 0;
-}
-
-.placarAzul{
-    height: 60px;
-
-    background-color: rgba(196, 221, 250, 0.87);
-    border: 3px solid blue;
-    border-top: 0;
-}
+.reflesh ion-icon{ height: 100%; width: 100%; display: block; }
+.reflesh{ background-color: rgba(158, 70, 158, 0.12); border: 2px solid rgba(128,0,128,0.2); border-bottom: 0; border-top: 0; border-radius: 8px; will-change: transform; backface-visibility: hidden; transform-origin: center; }
+.reflesh:hover{ transform: translateY(-4px) scale(1.04); box-shadow: 0 10px 24px rgba(0,0,0,0.12); }
+.placarVermelho{ height: 60px; background-color: rgba(250, 196, 196, 0.9); border: 2px solid var(--accent-red); }
+.placarAzul{ height: 60px; background-color: rgba(196, 221, 250, 0.95); border: 2px solid var(--accent-blue); }
 
 @media(max-width:600px){
-
+    .container{ height: 280px; width: 280px; }
     .placar{
         height: 50px;
         width: 170px;
@@ -134,38 +80,6 @@ p{
         flex-direction: row;
         justify-content: space-between;
     }
-    
-    .placares{
-        height: 50px;
-        width: 100%;
-    
-    }
-    
-    .reflesh ion-icon{
-        height: 100%;
-        width: 100%;
-    
-    }
-    
-    .reflesh{
-        background-color: rgba(158, 70, 158, 0.418);
-        border: 3px solid purple;
-        border-bottom: 0;
-        border-top: 0;
-    }
-    
-    .placarVermelho{
-    
-        background-color: rgba(250, 196, 196, 0.87);
-        border: 3px solid red;
-        border-right: 0;
-    }
-    
-    .placarAzul{
-    
-        background-color: rgba(196, 221, 250, 0.87);
-        border: 3px solid blue;
-        border-left: 0;
-    }
-    
+    .placares{ height: 50px; font-size: 20px }
+    .reflesh:hover{ transform: translateY(-3px) scale(1.02); }
 }
